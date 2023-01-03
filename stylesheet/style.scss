@@ -1,0 +1,12 @@
+.calculator {
+  width: 50%;
+  padding: 0.5rem 1rem;
+  border: solid black 2px;
+}
+
+.box {
+  //border: solid lightblue 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
