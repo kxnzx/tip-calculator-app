@@ -8,18 +8,32 @@ document
   .getElementById("tip-custom")
   .addEventListener("input", calculateAndDisplayValues);
 
-// Calculate and display the values when the number of people changes
+/*// Calculate and display the values when the number of people changes
 document
   .getElementById("people")
   .addEventListener("input", calculateAndDisplayValues);
 calculateAndDisplayValues();
+*/
+
+// Calculate and display the values when the number of people changes
+let previousTip = 5;
+document.getElementById("people").addEventListener("input", () => {
+  calculateAndDisplayValues(null, true);
+});
+calculateAndDisplayValues(); // Calculate the tip and total amount and display the values
+function calculateAndDisplayValues(pointer, people) {
+  // Get the bill amount and tip percentage
+  var billAmount = document.getElementById("bill").value;
+  previousTip = !people ? this.value || previousTip : previousTip;
+  var tipPercentage = previousTip || this.value;
+}
 
 // Calculate the tip and total amount and display the values
 function calculateAndDisplayValues() {
   // Get the bill amount and tip percentage
   var billAmount = document.getElementById("bill").value;
   var tipPercentage = this.value;
-
+  ////////////////////////////////////////////
   // If the custom tip percentage input is not empty, use it instead of the button value
   if (document.getElementById("tip-custom").value) {
     tipPercentage = document.getElementById("tip-custom").value;
