@@ -8,7 +8,7 @@ document
   .getElementById("tip-custom")
   .addEventListener("input", calculateAndDisplayValues);
 
-/*// Calculate and display the values when the number of people changes
+/*/// Calculate and display the values when the number of people changes
 document
   .getElementById("people")
   .addEventListener("input", calculateAndDisplayValues);
