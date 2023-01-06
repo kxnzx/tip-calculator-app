@@ -12,7 +12,8 @@ document.getElementById("people").addEventListener("input", () => {
 });
 // Calling the function:
 calculateAndDisplayValues();
-// FUNCTION
+
+// FUNCTION CalculateAndDisplayValues
 // Calculate the tip and total amount and display the values:
 function calculateAndDisplayValues(pointer, people) {
   // Get the bill amount and tip percentage:
@@ -22,9 +23,10 @@ function calculateAndDisplayValues(pointer, people) {
   // If the custom tip percentage input is not empty, use it instead of the button value:
   if (document.getElementById("tip-custom").value) {
     tipPercentage = document.getElementById("tip-custom").value;
-  } // Convert the bill amount and tip percentage to numbers:
+  } // Convert the bill amount and tip percentage to numbers (because the initial/default value is a string):
   billAmount = parseFloat(billAmount);
-  tipPercentage = parseFloat(tipPercentage); // Check if the bill amount and tip percentage are valid numbers:
+  tipPercentage = parseFloat(tipPercentage);
+  // Check if the bill amount and tip percentage are valid numbers (isNAN = isNotaNumber):
   if (isNaN(billAmount) || isNaN(tipPercentage)) {
     // Display an error message if the values are not valid:
     document.getElementById("tip-amount_pp").innerHTML = "Error";
@@ -51,7 +53,9 @@ function calculateAndDisplayValues(pointer, people) {
     tipAmountPerPerson.toFixed(2);
   document.getElementById("total-amount_pp").innerHTML =
     totalAmountPerPerson.toFixed(2);
-} // Reset the form when the reset button is clicked:
+}
+
+// Reset the form when the reset button is clicked:
 document
   .querySelector('button[type="reset"]')
   .addEventListener("click", function () {
