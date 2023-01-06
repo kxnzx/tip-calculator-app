@@ -35,7 +35,8 @@ function calculateAndDisplayValues(pointer, people) {
   } // Get the number of people:
   var people = document.getElementById("people").value;
   // Convert the number of people to a number:
-  // If you want to treat the value as a number, you can use the parseInt() or parseFloat() functions to convert it to a number.
+  /* If you want to treat the value as a number, 
+  you can use the parseInt() or parseFloat() functions to convert it to a number. */
   people = parseInt(people, 10);
   // Check if the number of people is a valid number:
   if (isNaN(people) || people <= 0) {
