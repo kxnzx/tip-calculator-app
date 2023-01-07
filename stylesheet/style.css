@@ -1,11 +1,75 @@
-.calculator {
-  width: 50%;
-  padding: 0.5rem 1rem;
-  border: solid black 2px;
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 62.5% of 16px browser font size is 10px */
 }
 
-.box {
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+input {
+  border: none;
+  background-color: hsl(189deg, 41%, 97%);
+  width: 31rem;
+  padding: 1.3rem;
+}
+
+button {
+  border: none;
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(0deg, 0%, 100%);
+  width: 10rem;
+  padding: 1rem 0 1rem 0;
+}
+
+body {
+  font-family: "Space Mono", sans-serif;
+  font-size: 1.6rem;
+  background-color: hsl(185deg, 41%, 84%);
+  color: hsl(184deg, 14%, 56%);
+}
+
+header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+}
+header .logo {
+  width: 8rem;
+  padding: 5rem 0 4rem 0;
+}
+
+main {
+  background-color: hsl(0deg, 0%, 100%);
+  max-width: 37.5rem;
+  margin: auto;
+  border-radius: 20px;
+  padding: 4rem 3rem;
+}
+
+.bill-input::before {
+  background-image: url(../images/icon-dollar.svg);
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
+  font-size: 1.3rem;
+  width: 100%;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

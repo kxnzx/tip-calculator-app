@@ -15,43 +15,50 @@
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
-    <!-- FORM -->
-    <form>
-      <!-- Input for Bill Amount -->
-      <label for="bill">Bill</label>
-      <input type="text" name="bill" id="bill" /><br />
-      <!-- Buttons for Tip Percentage -->
-      <button type="button" value="5" id="tip-5">5%</button><br />
-      <button type="button" value="10" id="tip-10">10%</button><br />
-      <button type="button" value="15" id="tip-15">15%</button><br />
-      <button type="button" value="25" id="tip-25">25%</button><br />
-      <button type="button" value="50" id="tip-50">50%</button><br />
-      <!-- Input for Custom Tip Percentage -->
-      <label for="tip-custom">Custom Tip Percentage</label>
-      <input type="input" name="tip-custom" id="tip-custom" /><br />
-      <!-- Input for Number of People -->
-      <small id="error"></small>
-      <label for="people">Number of People</label>
-      <input type="text" name="people" id="people" />
-    </form>
-    <!-- CALCULATOR -->
-    <div class="calculator">
-      <div class="box">
-        <div class="label tip-amount">
-          <p>Tip Amount</p>
-          <p>/ person</p>
+    <header>
+      <!-- LOGO -->
+      <img src="./images/logo.svg" alt="Splitter Logo" class="logo" />
+    </header>
+    <main>
+      <!-- FORM -->
+      <form>
+        <!-- Input for Bill Amount -->
+        <label for="bill" class="bill-label">Bill</label>
+        <input type="text" name="bill" id="bill" class="bill-input" />
+        <br />
+        <!-- Buttons for Tip Percentage -->
+        <button type="button" value="5" id="tip-5">5%</button><br />
+        <button type="button" value="10" id="tip-10">10%</button><br />
+        <button type="button" value="15" id="tip-15">15%</button><br />
+        <button type="button" value="25" id="tip-25">25%</button><br />
+        <button type="button" value="50" id="tip-50">50%</button><br />
+        <!-- Input for Custom Tip Percentage -->
+        <label for="tip-custom">Custom Tip Percentage</label>
+        <input type="input" name="tip-custom" id="tip-custom" /><br />
+        <!-- Input for Number of People -->
+        <small id="error"></small>
+        <label for="people">Number of People</label>
+        <input type="text" name="people" id="people" />
+      </form>
+      <!-- CALCULATOR -->
+      <div class="calculator">
+        <div class="box">
+          <div class="label tip-amount">
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <p class="tip_pp" id="tip-amount_pp">4,27</p>
         </div>
-        <p class="tip_pp" id="tip-amount_pp">4,27</p>
-      </div>
-      <div class="box">
-        <div class="label total">
-          <p>Total</p>
-          <p>/ person</p>
+        <div class="box">
+          <div class="label total">
+            <p>Total</p>
+            <p>/ person</p>
+          </div>
+          <p class="total_pp" id="total-amount_pp">32,79</p>
         </div>
-        <p class="total_pp" id="total-amount_pp">32,79</p>
+        <button type="reset">Reset</button>
       </div>
-      <button type="reset">Reset</button>
-    </div>
+    </main>
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
