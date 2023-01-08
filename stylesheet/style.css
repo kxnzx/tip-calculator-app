@@ -25,17 +25,47 @@ img {
 
 input {
   border: none;
+  border-radius: 7px;
   background-color: hsl(189deg, 41%, 97%);
+  font-family: "Space Mono", sans-serif;
+  font-size: 2.4rem;
+  color: hsl(183deg, 100%, 15%);
   width: 31rem;
-  padding: 1.3rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  outline: none;
+}
+
+::-moz-placeholder {
+  color: hsl(183deg, 100%, 15%);
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+:-ms-input-placeholder {
+  color: hsl(183deg, 100%, 15%);
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+::placeholder {
+  color: hsl(183deg, 100%, 15%);
+  font-weight: 700;
+  font-size: 2.4rem;
 }
 
 button {
   border: none;
   background-color: hsl(183deg, 100%, 15%);
   color: hsl(0deg, 0%, 100%);
-  width: 10rem;
+  width: 15rem;
   padding: 1rem 0 1rem 0;
+  border-radius: 7px;
+  font-family: "Space Mono", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: hsl(189deg, 41%, 97%);
+  cursor: pointer;
 }
 
 body {
@@ -62,8 +92,73 @@ main {
   padding: 4rem 3rem;
 }
 
-.bill-input::before {
-  background-image: url(../images/icon-dollar.svg);
+.bill-box {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.bill-box > ::-moz-placeholder {
+  text-align: right;
+}
+
+.bill-box > :-ms-input-placeholder {
+  text-align: right;
+}
+
+.bill-box > ::placeholder {
+  text-align: right;
+}
+
+.bill-input {
+  text-align: right;
+}
+
+.dollar-icon {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+.select-tip {
+  margin-bottom: 1.5rem;
+}
+
+.button-box {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.button-box > ::-moz-placeholder {
+  text-align: center;
+}
+
+.button-box > :-ms-input-placeholder {
+  text-align: center;
+}
+
+.button-box > ::placeholder {
+  text-align: center;
+}
+
+.tip-custom {
+  width: 15rem;
+  height: 5.6rem;
+  text-align: center;
+}
+
+.people-box {
+  position: relative;
+}
+
+.person-icon {
+  position: absolute;
+  top: 30%;
+  left: 5%;
 }
 
 footer {

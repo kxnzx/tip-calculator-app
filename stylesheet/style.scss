@@ -50,18 +50,35 @@ img {
 
 input {
   border: none;
+  border-radius: 7px;
   background-color: $very_light_grayish_cyan;
+  font-family: $ff;
+  font-size: $fs_form_inputs;
+  color: $very_dark_cyan;
   width: 31rem;
-  padding: 1.3rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  outline: none;
+}
+
+::placeholder {
+  color: $very_dark_cyan;
+  font-weight: $fw_bold;
+  font-size: $fs_form_inputs;
 }
 
 button {
   border: none;
   background-color: $very_dark_cyan;
   color: $white;
-  width: 10rem;
+  width: 15rem;
   padding: 1rem 0 1rem 0;
-  //margin-bottom: 1rem;
+  border-radius: 7px;
+  font-family: $ff;
+  font-size: $fs_form_inputs;
+  font-weight: $fw_bold;
+  color: $very_light_grayish_cyan;
+  cursor: pointer;
 }
 // STYLES
 body {
@@ -88,10 +105,58 @@ main {
   padding: 4rem 3rem;
 }
 
+.bill-box {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.bill-box > ::placeholder {
+  text-align: right;
+}
+
 .bill-input {
-  &::before {
-    background-image: url(../images/icon-dollar.svg);
-  }
+  text-align: right;
+}
+
+.dollar-icon {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+.select-tip {
+  margin-bottom: 1.5rem;
+}
+
+.button-box {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.button-box > ::placeholder {
+  text-align: center;
+}
+
+.tip-custom {
+  width: 15rem;
+  height: 5.6rem;
+  //background-color: pink;
+  text-align: center;
+}
+
+.people-box {
+  position: relative;
+}
+
+.person-icon {
+  position: absolute;
+  top: 30%;
+  left: 5%;
 }
 
 footer {

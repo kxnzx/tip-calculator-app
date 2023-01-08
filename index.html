@@ -24,21 +24,51 @@
       <form>
         <!-- Input for Bill Amount -->
         <label for="bill" class="bill-label">Bill</label>
-        <input type="text" name="bill" id="bill" class="bill-input" />
+        <div class="bill-box">
+          <input
+            type="text"
+            name="bill"
+            placeholder="142.55"
+            id="bill"
+            class="bill-input"
+          />
+          <img
+            src="./images/icon-dollar.svg"
+            alt="Dollar Icon"
+            class="dollar-icon"
+          />
+        </div>
         <br />
+        <p class="select-tip">Select Tip %</p>
         <!-- Buttons for Tip Percentage -->
-        <button type="button" value="5" id="tip-5">5%</button><br />
-        <button type="button" value="10" id="tip-10">10%</button><br />
-        <button type="button" value="15" id="tip-15">15%</button><br />
-        <button type="button" value="25" id="tip-25">25%</button><br />
-        <button type="button" value="50" id="tip-50">50%</button><br />
-        <!-- Input for Custom Tip Percentage -->
-        <label for="tip-custom">Custom Tip Percentage</label>
-        <input type="input" name="tip-custom" id="tip-custom" /><br />
+        <div class="button-box">
+          <button type="button" value="5" id="tip-5">5%</button>
+          <button type="button" value="10" id="tip-10">10%</button>
+          <button type="button" value="15" id="tip-15">15%</button>
+          <button type="button" value="25" id="tip-25">25%</button>
+          <button type="button" value="50" id="tip-50">50%</button>
+          <!-- Input for Custom Tip Percentage -->
+          <label for="tip-custom" hidden>Custom Tip Percentage</label>
+          <input
+            type="input"
+            name="tip-custom"
+            id="tip-custom"
+            class="tip-custom"
+            placeholder="Custom"
+          />
+          <br />
+        </div>
         <!-- Input for Number of People -->
         <small id="error"></small>
         <label for="people">Number of People</label>
-        <input type="text" name="people" id="people" />
+        <div class="people-box">
+          <input type="text" name="people" id="people" />
+          <img
+            src="./images/icon-person.svg"
+            alt="Person Icon"
+            class="person-icon"
+          />
+        </div>
       </form>
       <!-- CALCULATOR -->
       <div class="calculator">
