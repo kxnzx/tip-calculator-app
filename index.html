@@ -59,10 +59,12 @@
           <br />
         </div>
         <!-- Input for Number of People -->
-        <small id="error"></small>
-        <label for="people">Number of People</label>
+        <div class="people-amount">
+          <label for="people">Number of People</label>
+          <small id="error" class="error"></small>
+        </div>
         <div class="people-box">
-          <input type="text" name="people" id="people" />
+          <input type="text" name="people" id="people" placeholder="5" />
           <img
             src="./images/icon-person.svg"
             alt="Person Icon"
@@ -72,21 +74,25 @@
       </form>
       <!-- CALCULATOR -->
       <div class="calculator">
-        <div class="box">
+        <div class="box bottom">
           <div class="label tip-amount">
             <p>Tip Amount</p>
             <p>/ person</p>
           </div>
-          <p class="tip_pp" id="tip-amount_pp">4,27</p>
+          <p class="result tip_pp" id="tip-amount_pp">
+            <span class="dollar-sign">$</span>4,27
+          </p>
         </div>
-        <div class="box">
+        <div class="box second-bottom">
           <div class="label total">
             <p>Total</p>
             <p>/ person</p>
           </div>
-          <p class="total_pp" id="total-amount_pp">32,79</p>
+          <p class="result total_pp" id="total-amount_pp">
+            <span class="dollar-sign">$</span>32,79
+          </p>
         </div>
-        <button type="reset">Reset</button>
+        <button type="reset" class="reset-button">Reset</button>
       </div>
     </main>
     <footer class="attribution">

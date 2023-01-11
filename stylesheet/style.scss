@@ -4,8 +4,10 @@
 // Colors
 // primary colors
 $strong_cyan: hsl(172, 67%, 45%);
+$strong_cyan_lighter: lighten($strong_cyan, 30%);
 // neutral colors
 $very_dark_cyan: hsl(183, 100%, 15%);
+$very_dark_cyan_lighter: lighten($very_dark_cyan, 10%);
 $dark_grayish_cyan: hsl(186, 14%, 43%);
 $grayish_cyan: hsl(184, 14%, 56%);
 $light_grayish_cyan: hsl(185, 41%, 84%);
@@ -55,10 +57,14 @@ input {
   font-family: $ff;
   font-size: $fs_form_inputs;
   color: $very_dark_cyan;
-  width: 31rem;
+  //width: 31rem;
+  width: 100%;
   padding: 0.75rem;
   cursor: pointer;
-  outline: none;
+}
+
+input:focus {
+  outline: $strong_cyan 2px solid;
 }
 
 ::placeholder {
@@ -79,6 +85,21 @@ button {
   font-weight: $fw_bold;
   color: $very_light_grayish_cyan;
   cursor: pointer;
+  @media screen and (min-width: $tablet) {
+    width: 20rem;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 11rem;
+  }
+}
+
+button:hover {
+  background-color: $strong_cyan_lighter;
+  color: $very_dark_cyan;
+}
+
+button:focus {
+  background-color: $strong_cyan;
 }
 // STYLES
 body {
@@ -86,6 +107,14 @@ body {
   font-size: 1.6rem;
   background-color: $light_grayish_cyan;
   color: $grayish_cyan;
+  @media screen and (min-width: $desktop) {
+    display: grid;
+    place-items: center;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
 }
 
 header {
@@ -94,6 +123,11 @@ header {
   .logo {
     width: 8rem;
     padding: 5rem 0 4rem 0;
+    @media screen and (min-width: $desktop) {
+      grid-area: "header";
+      padding: 0;
+      width: 9rem;
+    }
   }
 }
 
@@ -103,6 +137,21 @@ main {
   margin: auto;
   border-radius: 20px;
   padding: 4rem 3rem;
+  @media screen and (min-width: $tablet) {
+    max-width: 70rem;
+  }
+  @media screen and (min-width: $desktop) {
+    grid-area: "main";
+    max-width: 92rem;
+    display: flex;
+    gap: 5rem;
+  }
+}
+
+form {
+  @media screen and (min-width: $desktop) {
+    width: 38rem;
+  }
 }
 
 .bill-box {
@@ -136,6 +185,10 @@ main {
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 1.5rem;
   margin-bottom: 2.5rem;
+  @media screen and (min-width: $tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 
 .button-box > ::placeholder {
@@ -145,12 +198,35 @@ main {
 .tip-custom {
   width: 15rem;
   height: 5.6rem;
-  //background-color: pink;
   text-align: center;
+  @media screen and (min-width: $tablet) {
+    width: 20rem;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 11rem;
+  }
+}
+
+.people-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .error {
+    color: orangered;
+  }
 }
 
 .people-box {
   position: relative;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+  input {
+    text-align: right;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .person-icon {
@@ -159,10 +235,72 @@ main {
   left: 5%;
 }
 
+.calculator {
+  background-color: $very_dark_cyan;
+  border-radius: 20px;
+  padding: 4.5rem 2.5rem 2.3rem 2.5rem;
+  @media screen and (min-width: $desktop) {
+    width: 41rem;
+  }
+}
+
+.calculator > .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculator > .bottom {
+  margin-bottom: 3rem;
+}
+
+.label > p {
+  color: $very_light_grayish_cyan;
+  &:nth-child(2) {
+    color: $grayish_cyan;
+    font-size: 1.3rem;
+  }
+}
+
+.result {
+  font-size: 3.25rem;
+  color: $strong_cyan;
+  //content: "\0024";
+  //content: "$";
+}
+
+.reset-button {
+  background-color: $strong_cyan;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: $very_dark_cyan;
+  &:focus {
+    background-color: $very_dark_cyan_lighter;
+  }
+  &:hover {
+    background-color: $strong_cyan_lighter;
+  }
+}
+
+.second-bottom {
+  margin-bottom: 3.5rem;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 13rem;
+  }
+}
+
 footer {
   bottom: 0;
-  position: absolute;
   font-size: 1.3rem;
   width: 100%;
   text-align: center;
+  a {
+    color: $very_dark_cyan;
+  }
+  @media screen and (min-width: $desktop) {
+    grid-area: "footer";
+    position: absolute;
+    font-size: 1.6rem;
+  }
 }

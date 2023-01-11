@@ -1,10 +1,13 @@
 // Calculate and display the values when a button is clicked:
 document.querySelectorAll("button").forEach(function (button) {
   button.addEventListener("click", calculateAndDisplayValues);
-}); // Calculate and display the values when the custom tip percentage is typed in:
+});
+
+// Calculate and display the values when the custom tip percentage is typed in:
 document
   .getElementById("tip-custom")
   .addEventListener("input", calculateAndDisplayValues);
+
 // Calculate and display the values when the number of people changes:
 let previousTip = 5;
 document.getElementById("people").addEventListener("input", () => {
@@ -27,12 +30,7 @@ function calculateAndDisplayValues(pointer, people) {
   billAmount = parseFloat(billAmount);
   tipPercentage = parseFloat(tipPercentage);
   // Check if the bill amount and tip percentage are valid numbers (isNAN = isNotaNumber):
-  if (isNaN(billAmount) || isNaN(tipPercentage)) {
-    // Display an error message if the values are not valid:
-    document.getElementById("tip-amount_pp").innerHTML = "Error";
-    document.getElementById("total-amount_pp").innerHTML = "Error";
-    return;
-  } // Get the number of people:
+  // Get the number of people:
   var people = document.getElementById("people").value;
   // Convert the number of people to a number:
   /* If you want to treat the value as a number, 
@@ -60,9 +58,14 @@ function calculateAndDisplayValues(pointer, people) {
 document
   .querySelector('button[type="reset"]')
   .addEventListener("click", function () {
-    document.getElementById("bill").value = "";
-    document.getElementById("people").value = "";
+    document.getElementById("bill").value = "0";
+    document.getElementById("people").value = "0";
     document.getElementById("tip-custom").value = "";
-    document.getElementById("tip-amount_pp").innerHTML = "0.00";
-    document.getElementById("total-amount_pp").innerHTML = "0.00";
+    document.getElementById("tip-amount_pp").innerHTML = "$0.00";
+    document.getElementById("total-amount_pp").innerHTML = "$0.00";
   });
+
+/*
+  document.getElementById("people").style.borderColor = "red";
+  document.getElementById("people").style.borderWidth = "2px";
+*/
