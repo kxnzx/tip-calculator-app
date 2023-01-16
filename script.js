@@ -18,11 +18,11 @@ calculateAndDisplayValues();
 
 // FUNCTION CalculateAndDisplayValues
 // Calculate the tip and total amount and display the values:
-function calculateAndDisplayValues(pointer, people) {
+function calculateAndDisplayValues(pointer, peopleAmount) {
   // Get the bill amount and tip percentage:
-  var billAmount = document.getElementById("bill").value;
-  previousTip = !people ? this.value || previousTip : previousTip;
-  var tipPercentage = previousTip || this.value;
+  let billAmount = document.getElementById("bill").value;
+  previousTip = !peopleAmount ? this.value || previousTip : previousTip;
+  let tipPercentage = previousTip || this.value;
   // If the custom tip percentage input is not empty, use it instead of the button value:
   if (document.getElementById("tip-custom").value) {
     tipPercentage = document.getElementById("tip-custom").value;
@@ -31,7 +31,7 @@ function calculateAndDisplayValues(pointer, people) {
   tipPercentage = parseFloat(tipPercentage);
   // Check if the bill amount and tip percentage are valid numbers (isNAN = isNotaNumber):
   // Get the number of people:
-  var people = document.getElementById("people").value;
+  let people = document.getElementById("people").value;
   // Convert the number of people to a number:
   /* If you want to treat the value as a number, 
   you can use the parseInt() or parseFloat() functions to convert it to a number. */
@@ -47,9 +47,9 @@ function calculateAndDisplayValues(pointer, people) {
     removeError("error");
   }
   // Calculate the tip amount per person:
-  var tipAmountPerPerson = (billAmount * tipPercentage) / 100 / people;
+  let tipAmountPerPerson = (billAmount * tipPercentage) / 100 / people;
   // Calculate the total amount per person:
-  var totalAmountPerPerson = billAmount / people + tipAmountPerPerson;
+  let totalAmountPerPerson = billAmount / people + tipAmountPerPerson;
   // Display the tip and total amount, toFixed() rounds the number:
   document.getElementById("tip-amount_pp").innerHTML =
     tipAmountPerPerson.toFixed(2);
