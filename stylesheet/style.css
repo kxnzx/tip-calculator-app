@@ -222,23 +222,23 @@ main {
   }
 }
 
-.people-amount {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.people-amount .error {
-  color: orangered;
-}
-
 .people-box {
   position: relative;
-  margin-top: 0.5rem;
   margin-bottom: 2.5rem;
+  display: grid;
+  grid-template-areas: "label error" "input input";
+}
+.people-box .label {
+  grid-area: "label";
+}
+.people-box .error {
+  text-align: right;
+  grid-area: "error";
+  color: orangered;
 }
 .people-box input {
   text-align: right;
+  grid-area: 2/1/span 1/span 2;
 }
 @media screen and (min-width: 1024px) {
   .people-box {
@@ -248,7 +248,7 @@ main {
 
 .person-icon {
   position: absolute;
-  top: 30%;
+  top: 55%;
   left: 5%;
 }
 

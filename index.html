@@ -32,11 +32,7 @@
             id="bill"
             class="bill-input"
           />
-          <img
-            src="./images/icon-dollar.svg"
-            alt="Dollar Icon"
-            class="dollar-icon"
-          />
+          <img src="./images/icon-dollar.svg" alt="" class="dollar-icon" />
         </div>
         <br />
         <p class="select-tip">Select Tip %</p>
@@ -59,17 +55,17 @@
           <br />
         </div>
         <!-- Input for Number of People -->
-        <div class="people-amount">
-          <label for="people">Number of People</label>
-          <small id="error" class="error"></small>
-        </div>
         <div class="people-box">
-          <input type="text" name="people" id="people" placeholder="5" />
-          <img
-            src="./images/icon-person.svg"
-            alt="Person Icon"
-            class="person-icon"
+          <label for="people" class="label">Number of People</label>
+          <small id="error" class="error"></small>
+          <input
+            type="text"
+            name="people"
+            id="people"
+            placeholder="5"
+            aria-describedby="error"
           />
+          <img src="./images/icon-person.svg" alt="" class="person-icon" />
         </div>
       </form>
       <!-- CALCULATOR -->

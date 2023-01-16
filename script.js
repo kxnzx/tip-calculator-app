@@ -43,7 +43,10 @@ function calculateAndDisplayValues(pointer, people) {
     return;
   } else if (isNaN(people) || people >= 0) {
     document.getElementById("error").innerHTML = "";
-  } // Calculate the tip amount per person:
+  } else {
+    removeError("error");
+  }
+  // Calculate the tip amount per person:
   var tipAmountPerPerson = (billAmount * tipPercentage) / 100 / people;
   // Calculate the total amount per person:
   var totalAmountPerPerson = billAmount / people + tipAmountPerPerson;
