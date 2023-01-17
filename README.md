@@ -59,25 +59,17 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+It took me some time to finish this challenge. The calculator works, however the form does not function the way I want it to. Here are some of the issues:
 
-To see how you can add code snippets, see below:
+- The error message "Can't be zero" is displayed by default.
+- After the reset button has been clicked the value "0" stays set in place after typing in a new value.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+My Questions:
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+- How can I make the error message and the red focus on the input visible only after the tip percentage button or custom input have been filled in?
+- How do I make the value "0" dissapear when a new value is typed in after the reset button has been clicked?
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
+Feel free to leave a comment. Much Appreciated!
 
 ## Author
 
