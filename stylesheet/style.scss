@@ -231,6 +231,10 @@ form {
   }
 }
 
+input:required:focus {
+  outline: solid orangered 2px;
+}
+
 .person-icon {
   position: absolute;
   top: 55%;

@@ -67,8 +67,3 @@ document
     document.getElementById("tip-amount_pp").innerHTML = "$0.00";
     document.getElementById("total-amount_pp").innerHTML = "$0.00";
   });
-
-/*
-  document.getElementById("people").style.borderColor = "red";
-  document.getElementById("people").style.borderWidth = "2px";
-*/
