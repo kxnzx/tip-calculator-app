@@ -246,8 +246,14 @@ main {
   }
 }
 
+/*
 input:required:focus {
   outline: solid orangered 2px;
+}
+*/
+.people.invalid {
+  border: none;
+  outline: 2px solid hsl(9deg, 31%, 58%);
 }
 
 .person-icon {

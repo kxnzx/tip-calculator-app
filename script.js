@@ -61,8 +61,8 @@ function calculateAndDisplayValues(pointer, peopleAmount) {
 document
   .querySelector('button[type="reset"]')
   .addEventListener("click", function () {
-    document.getElementById("bill").value = "0";
-    document.getElementById("people").value = "0";
+    document.getElementById("bill").value = "";
+    document.getElementById("people").value = "";
     document.getElementById("tip-custom").value = "";
     document.getElementById("tip-amount_pp").innerHTML = "$0.00";
     document.getElementById("total-amount_pp").innerHTML = "$0.00";

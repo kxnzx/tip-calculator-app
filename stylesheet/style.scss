@@ -231,8 +231,15 @@ form {
   }
 }
 
+/*
 input:required:focus {
   outline: solid orangered 2px;
+}
+*/
+// Add class in JavaScript
+.people.invalid {
+  border: none;
+  outline: 2px solid hsl(9, 31%, 58%);
 }
 
 .person-icon {
