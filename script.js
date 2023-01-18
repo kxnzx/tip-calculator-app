@@ -37,14 +37,8 @@ function calculateAndDisplayValues(pointer, peopleAmount) {
   you can use the parseInt() or parseFloat() functions to convert it to a number. */
   people = parseInt(people, 10);
   // Check if the number of people is a valid number:
-  if (isNaN(people) || people <= 0) {
-    // Display an error message if the value is not valid:
-    document.getElementById("error").innerHTML = "Can't be zero";
+  if (people <= 0 || isNaN(people)) {
     return;
-  } else if (isNaN(people) || people >= 0) {
-    document.getElementById("error").innerHTML = "";
-  } else {
-    removeError("error");
   }
   // Calculate the tip amount per person:
   let tipAmountPerPerson = (billAmount * tipPercentage) / 100 / people;
@@ -56,6 +50,26 @@ function calculateAndDisplayValues(pointer, peopleAmount) {
   document.getElementById("total-amount_pp").innerHTML =
     totalAmountPerPerson.toFixed(2);
 }
+
+document.getElementById("people").addEventListener("click", () => {
+  let people = document.getElementById("people").value;
+  // Convert the number of people to a number:
+  /* If you want to treat the value as a number, 
+    you can use the parseInt() or parseFloat() functions to convert it to a number. */
+  people = parseInt(people, 10);
+  // Check if the number of people is a valid number:
+  if (isNaN(people) || people <= 0) {
+    // Display an error message if the value is not valid:
+    document.getElementById("error").innerHTML = "Can't be zero";
+    // Make the outline red if the value is not valid:
+    document.getElementById("people").classList.add("invalid");
+    return;
+  } else {
+    document.getElementById("error").innerHTML = "";
+    document.getElementById("people").classList.remove("invalid");
+    return;
+  }
+});
 
 // Reset the form when the reset button is clicked:
 document
