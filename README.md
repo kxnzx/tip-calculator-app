@@ -59,17 +59,20 @@ Users should be able to:
 
 ### What I learned
 
-It took me some time to finish this challenge. The calculator works, however the form does not function the way I want it to. Here are some of the issues:
+Points of Attention:
 
-- The error message "Can't be zero" is displayed by default.
-- After the reset button has been clicked the value "0" stays set in place after typing in a new value.
-
-My Questions:
-
-- How can I make the error message and the red focus on the input visible only after the tip percentage button or custom input have been filled in?
-- How do I make the value "0" dissapear when a new value is typed in after the reset button has been clicked?
-
-Feel free to leave a comment. Much Appreciated!
+    - Split the validation out into separate functions.
+    - Run the validation on blur (better than on input imo).
+    - Use the value at the validation event, don’t get the input once you’re already running it.
+    - Follow guidance above re error input. The text must be inside another element. The outer is what has the unique ID and aria-live and is always present in the DOM; The inner is what holds the text of the message and should be not displayed by default.
+    - Inputs and buttons should not have explicit widths. The grid template controls the width so they can all be width 100%.
+    - Ideally use radios for the tip amounts not buttons. You may be able to get away with buttons but they would need aria-to communicate selected state.
+    - Use number input types or at least only allow numbers and use the inputmode attribute.
+    - Remove hidden from the custom input label.
+    - Use a fieldset with legend for select tip and all the options.
+    - Change tip amount per person and total per person to be one paragraph each, or even better headings.
+    - Ideally have a visually-hidden heading for that results panel.
+    - Make sure aria-live is on the results panel.
 
 ## Author
 
