@@ -51,12 +51,18 @@ function calculateAndDisplayValues(pointer, peopleAmount) {
     totalAmountPerPerson.toFixed(2);
 }
 
-document.getElementById("people").addEventListener("click", () => {
+document.getElementById("people").addEventListener("input", () => {
   let people = document.getElementById("people").value;
+
+  if (people === "") {
+    // If the input is empty, remove the error message and return out of the function
+    removeError();
+    return;
+  }
   // Convert the number of people to a number:
   /* If you want to treat the value as a number, 
     you can use the parseInt() or parseFloat() functions to convert it to a number. */
-  people = parseInt(people, 10);
+  people = Number(people);
   // Check if the number of people is a valid number:
   if (isNaN(people) || people <= 0) {
     // Display an error message if the value is not valid:
@@ -65,11 +71,16 @@ document.getElementById("people").addEventListener("click", () => {
     document.getElementById("people").classList.add("invalid");
     return;
   } else {
-    document.getElementById("error").innerHTML = "";
-    document.getElementById("people").classList.remove("invalid");
+    // If there is a valid number, remove the error message
+    removeError();
     return;
   }
 });
+
+function removeError() {
+  document.getElementById("error").innerHTML = "";
+  document.getElementById("people").classList.remove("invalid");
+}
 
 // Reset the form when the reset button is clicked:
 document
@@ -80,4 +91,7 @@ document
     document.getElementById("tip-custom").value = "";
     document.getElementById("tip-amount_pp").innerHTML = "$0.00";
     document.getElementById("total-amount_pp").innerHTML = "$0.00";
+    document.getElementById("error").innerHTML = "";
+    document.getElementById("people").classList.remove("invalid");
+    return;
   });
