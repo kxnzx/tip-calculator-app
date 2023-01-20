@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- View my Solution on [Frontend Mentor]()
-- View the [Live Site]()
+- View my Solution on [Frontend Mentor](https://www.frontendmentor.io/solutions/tip-calculator-app-5ENQsoQSkk#comment-63c86906d9494d866aaace07)
+- View the [Live Site](https://kxnzx.github.io/tip-calculator-app/)
 
 ## My process
 
