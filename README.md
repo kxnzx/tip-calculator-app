@@ -27,11 +27,11 @@ Users should be able to:
 
 #### Screensize 1440px - Desktop
 
-![Desktop](./assets/images/Desktop.gif)
+![Desktop](./images/Desktop.gif)
 
 #### Screensize 375px - Mobile
 
-![Mobile](./assets/images/Mobile.gif)
+![Mobile](./images/Mobile.gif)
 
 ### Links
 
