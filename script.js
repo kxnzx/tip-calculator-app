@@ -91,7 +91,6 @@ document
     document.getElementById("tip-custom").value = "";
     document.getElementById("tip-amount_pp").innerHTML = "$0.00";
     document.getElementById("total-amount_pp").innerHTML = "$0.00";
-    document.getElementById("error").innerHTML = "";
-    document.getElementById("people").classList.remove("invalid");
+    removeError();
     return;
   });
